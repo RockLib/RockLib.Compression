@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rock.Core\Compression\RockLib.Compression.csproj" />
+    <ProjectReference Include="..\RockLib.Compression\RockLib.Compression.csproj" />
   </ItemGroup>
 
   <ItemGroup>

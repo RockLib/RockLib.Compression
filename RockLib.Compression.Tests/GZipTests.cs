@@ -6,7 +6,7 @@ using Xunit;
 
 namespace RockLib.Compression.Tests
 {
-    class GZipTests
+    public class GZipTests
     {
         [Fact]
         public void GZipICompressorIDecompressorWorks()
