@@ -3,7 +3,7 @@ image: Visual Studio 2017
 configuration: Release
 only_commits:
   files:
-  - Rock.Core/Compression/
+  - RockLib.Compression/
   - RockLib.Compression.Tests/
   - RockLib.Compression.sln
   - RockLib.Compression.appveyor.yml
