@@ -6,12 +6,12 @@
 
   <PropertyGroup>
     <PackageId>RockLib.Compression</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>RockLib</Authors>
     <Description>Various classes related to compression.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageProjectUrl>https://github.com/RockLib/RockLib.Messaging</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/RockLib/RockLib.Compression</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Copyright>Copyright 2017-2020 (c) Quicken Loans Corporation. All rights reserved.</Copyright>
     <PackageTags>rocklib compression</PackageTags>
