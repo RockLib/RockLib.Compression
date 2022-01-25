@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 
 namespace RockLib.Compression
@@ -12,6 +13,7 @@ namespace RockLib.Compression
         /// </summary>
         /// <param name="inputStream">The stream to compress.</param>
         /// <returns>The compressed byte array.</returns>
+        /// <exception cref="ArgumentNullException"></exception>
         byte[] Compress(Stream inputStream);
     }
 }

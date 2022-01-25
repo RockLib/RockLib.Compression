@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 
 namespace RockLib.Compression
@@ -14,9 +15,11 @@ namespace RockLib.Compression
         /// <param name="compressor">Compressor to extend</param>
         /// <param name="text">The text to compress</param>
         /// <param name="encoding">The optional encoding to use.</param>
-        /// <returns></returns>
+        /// <returns>The compressed byte array.</returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static byte[] Compress(this ICompressor compressor, string text, Encoding encoding = null)
         {
+            if (compressor == null) throw new ArgumentNullException(nameof(compressor));
             if (encoding == null) encoding = Encoding.UTF8;
             using (var outputStream = new MemoryStream(encoding.GetBytes(text)))
             {
@@ -29,9 +32,11 @@ namespace RockLib.Compression
         /// </summary>
         /// <param name="compressor">Compressor to extend</param>
         /// <param name="data">The data to compress</param>
-        /// <returns></returns>
+        /// <returns>The compressed byte array.</returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static byte[] Compress(this ICompressor compressor, byte[] data)
         {
+            if (compressor == null) throw new ArgumentNullException(nameof(compressor));
             using (var outputStream = new MemoryStream(data))
             {
                 return compressor.Compress(outputStream);
@@ -43,9 +48,11 @@ namespace RockLib.Compression
         /// </summary>
         /// <param name="decompressor">Compressor to extend</param>
         /// <param name="data">The data to decompress</param>
-        /// <returns></returns>
+        /// <returns>A decompressed byte array.</returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static byte[] Decompress(this IDecompressor decompressor, byte[] data)
         {
+            if (decompressor == null) throw new ArgumentNullException(nameof(decompressor));
             using (var outputStream = new MemoryStream(data))
             {
                 return decompressor.Decompress(outputStream);
