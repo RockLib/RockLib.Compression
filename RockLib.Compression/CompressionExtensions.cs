@@ -52,7 +52,7 @@ namespace RockLib.Compression
         /// <exception cref="ArgumentNullException"></exception>
         public static byte[] Decompress(this IDecompressor decompressor, byte[] data)
         {
-            if (decompressor == null) throw new ArgumentNullException(nameof(decompressor));
+            if (decompressor is null) throw new ArgumentNullException(nameof(decompressor));
             using (var outputStream = new MemoryStream(data))
             {
                 return decompressor.Decompress(outputStream);
