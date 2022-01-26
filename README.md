@@ -16,7 +16,7 @@ This library is meant to simplify the usage of standard compression algorithms, 
 
  The `IDecompressor.Decompress` extension method takes a `byte[]` containing compressed data and returns a `byte[]` with the decompressed input array.
  
- ### Requirements
+ ### Supported Targets 
 
  This library supports the following targets:
    - .NET 6
