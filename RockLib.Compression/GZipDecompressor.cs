@@ -17,7 +17,7 @@ namespace RockLib.Compression
         /// <exception cref="ArgumentNullException"></exception>
         public byte[] Decompress(Stream inputStream)
         {
-            if (inputStream == null) throw new ArgumentNullException(nameof(inputStream));
+            if (inputStream is null) throw new ArgumentNullException(nameof(inputStream));
             using (var outputStream = new MemoryStream())
             {
                 using (var gzStream = new GZipStream(inputStream, CompressionMode.Decompress, true))
