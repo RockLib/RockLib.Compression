@@ -1,5 +1,6 @@
 <Project>
 	<PropertyGroup>
+		<TargetFrameworks>net6.0;netcoreapp3.1;net48;</TargetFrameworks>
 		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
 		<NoWarn>NU1603,NU1701</NoWarn>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
