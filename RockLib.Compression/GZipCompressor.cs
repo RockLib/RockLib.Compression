@@ -14,9 +14,10 @@ namespace RockLib.Compression
         /// </summary>
         /// <param name="inputStream">The stream to compress.</param>
         /// <returns>The compressed byte array.</returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public byte[] Compress(Stream inputStream)
         {
-            if (inputStream == null) throw new ArgumentNullException(nameof(inputStream));
+            if (inputStream is null) throw new ArgumentNullException(nameof(inputStream));
             using (var outputStream = new MemoryStream())
             {
                 using (var gzStream = new GZipStream(outputStream, CompressionMode.Compress, true))
