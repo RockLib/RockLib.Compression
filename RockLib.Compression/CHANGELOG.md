@@ -9,8 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Changed
 
-- Supported targets: net48, net6.0, and net8.0.
-- Removed .NET Core 3.1 support.
+- Supported targets: .NET Framework 4.8, .NET 6, and .NET 8.
+- Removed targets: .NET Core 3.1.
 
 ## 2.0.0 - 2022-01-25
 
