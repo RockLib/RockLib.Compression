@@ -10,7 +10,7 @@
     <PackageProjectUrl>https://github.com/RockLib/RockLib.Compression</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageIcon>icon.png</PackageIcon>
-    <Copyright>Copyright 2022 (c) Rocket Mortgage. All rights reserved.</Copyright>
+    <Copyright>Copyright 2024 (c) Rocket Mortgage. All rights reserved.</Copyright>
     <PackageTags>rocklib compression</PackageTags>
     <Version>3.0.0-alpha.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
