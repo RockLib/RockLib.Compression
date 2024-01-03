@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>RockLib.Compression</PackageId>
-    <PackageVersion>2.0.0</PackageVersion>
+    <PackageVersion>3.0.0-alpha.1</PackageVersion>
     <Authors>RockLib</Authors>
     <Description>Various classes related to compression.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -10,13 +10,14 @@
     <PackageProjectUrl>https://github.com/RockLib/RockLib.Compression</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageIcon>icon.png</PackageIcon>
-    <Copyright>Copyright 2022 (c) Rocket Mortgage. All rights reserved.</Copyright>
+    <Copyright>Copyright 2024 (c) Rocket Mortgage. All rights reserved.</Copyright>
     <PackageTags>rocklib compression</PackageTags>
-    <Version>1.0.0</Version>
+    <Version>3.0.0-alpha.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PublishRepositoryUrl>True</PublishRepositoryUrl>
     <EmbedUntrackedSources>True</EmbedUntrackedSources>
     <DebugType>Embedded</DebugType>
+    <TargetFrameworks>net6.0;net8.0;net48</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -33,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>

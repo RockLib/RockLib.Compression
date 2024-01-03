@@ -1,0 +1,19 @@
+name: Run Unit Test
+
+####################################################################################################
+##  WORKFLOW TRIGGER
+####################################################################################################
+on:
+  # Workflow will run on pull requests to the main branch.
+  pull_request:
+    branches: [ main ]
+
+####################################################################################################
+##  WORKFLOW JOBS
+####################################################################################################
+jobs:
+  # Calls the shared unit-test workflow.
+  call_unit_test:
+    name: Call unit-test workflow
+    uses: RockLib/RockLib.Workflows/.github/workflows/unit-test.yml@main
+    secrets: inherit

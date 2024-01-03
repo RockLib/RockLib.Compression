@@ -3,12 +3,12 @@
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 	</PropertyGroup>
 	<PropertyGroup>
-		<TargetFrameworks>net6.0;netcoreapp3.1;net48;</TargetFrameworks>
-		<AnalysisMode>AllEnabledByDefault</AnalysisMode>
+		<TargetFrameworks>net48;net6.0;net8.0;</TargetFrameworks>
+		<AnalysisMode>all</AnalysisMode>
 		<NoWarn>NU1603,NU1701</NoWarn>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	</PropertyGroup>
-	<ItemGroup Condition=" '$(TargetFramework)' == 'net48' or '$(TargetFramework)' == 'netcoreapp3.1'">
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net48'">
 		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -1,0 +1,20 @@
+name: Run Snyk Test
+
+####################################################################################################
+##  WORKFLOW TRIGGER
+####################################################################################################
+on:
+  # Workflow will run after unit-test is completed.
+  workflow_run:
+    workflows: [ Run Unit Test ]
+    types: [ completed ]
+
+####################################################################################################
+##  WORKFLOW JOBS
+####################################################################################################
+jobs:
+  # Calls the shared snyk-test workflow.
+  call_snyk_test:
+    name: Call snyk-test workflow
+    uses: RockLib/RockLib.Workflows/.github/workflows/snyk-test.yml@main
+    secrets: inherit
