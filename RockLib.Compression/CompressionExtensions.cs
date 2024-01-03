@@ -19,7 +19,12 @@ namespace RockLib.Compression
         /// <exception cref="ArgumentNullException"></exception>
         public static byte[] Compress(this ICompressor compressor, string text, Encoding encoding = null)
         {
-            if (compressor is null) throw new ArgumentNullException(nameof(compressor));
+#if NET6_0_OR_GREATER
+            ArgumentNullException.ThrowIfNull(compressor);
+#else
+            if (compressor is null)
+                throw new ArgumentNullException(nameof(compressor));
+#endif
             if (encoding is null) encoding = Encoding.UTF8;
             using (var outputStream = new MemoryStream(encoding.GetBytes(text)))
             {
@@ -36,7 +41,12 @@ namespace RockLib.Compression
         /// <exception cref="ArgumentNullException"></exception>
         public static byte[] Compress(this ICompressor compressor, byte[] data)
         {
-            if (compressor is null) throw new ArgumentNullException(nameof(compressor));
+#if NET6_0_OR_GREATER
+            ArgumentNullException.ThrowIfNull(compressor);
+#else
+            if (compressor is null)
+                throw new ArgumentNullException(nameof(compressor));
+#endif
             using (var outputStream = new MemoryStream(data))
             {
                 return compressor.Compress(outputStream);
@@ -52,7 +62,12 @@ namespace RockLib.Compression
         /// <exception cref="ArgumentNullException"></exception>
         public static byte[] Decompress(this IDecompressor decompressor, byte[] data)
         {
-            if (decompressor is null) throw new ArgumentNullException(nameof(decompressor));
+#if NET6_0_OR_GREATER
+            ArgumentNullException.ThrowIfNull(decompressor);
+#else
+            if (decompressor is null)
+                throw new ArgumentNullException(nameof(decompressor));
+#endif
             using (var outputStream = new MemoryStream(data))
             {
                 return decompressor.Decompress(outputStream);

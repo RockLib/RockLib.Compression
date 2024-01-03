@@ -17,7 +17,12 @@ namespace RockLib.Compression
         /// <exception cref="ArgumentNullException"></exception>
         public byte[] Compress(Stream inputStream)
         {
-            if (inputStream is null) throw new ArgumentNullException(nameof(inputStream));
+#if NET6_0_OR_GREATER
+            ArgumentNullException.ThrowIfNull(inputStream);
+#else
+            if (inputStream is null)
+                throw new ArgumentNullException(nameof(inputStream));
+#endif
             using (var outputStream = new MemoryStream())
             {
                 using (var deflateStream = new DeflateStream(outputStream, CompressionMode.Compress, true))
