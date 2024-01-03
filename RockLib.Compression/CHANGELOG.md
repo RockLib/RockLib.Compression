@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Changed
 
 - Supported targets: net48, net6.0, and net8.0.
+- Removed .NET Core 3.1 support.
 
 ## 2.0.0 - 2022-01-25
 
