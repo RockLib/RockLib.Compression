@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageId>RockLib.Compression</PackageId>
-    <PackageVersion>3.0.0-alpha.1</PackageVersion>
+    <PackageVersion>3.0.0</PackageVersion>
     <Authors>RockLib</Authors>
     <Description>Various classes related to compression.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -12,7 +12,7 @@
     <PackageIcon>icon.png</PackageIcon>
     <Copyright>Copyright 2024 (c) Rocket Mortgage. All rights reserved.</Copyright>
     <PackageTags>rocklib compression</PackageTags>
-    <Version>3.0.0-alpha.1</Version>
+    <Version>3.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PublishRepositoryUrl>True</PublishRepositoryUrl>
     <EmbedUntrackedSources>True</EmbedUntrackedSources>
